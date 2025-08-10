@@ -12,8 +12,7 @@ body, p, span, li, div, a, h1, h2, h3, h4, h5, h6, .post-body, .sidebar, .widget
 
   
   <head>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
-    <meta content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <!--########### SEO Titles ########### -->
     <b:if cond='data:blog.url == data:blog.homepageUrl'>
@@ -287,11 +286,13 @@ body#layout #blog { margin-top: -180px; }
 .col-md-6 {
 width: 100% !important;
 }
-@media (max-width: 767px) {
-  .sidebar {
-    display: none !important; /* Or width: 100% for full-width */
+/* Styles for tablet and smaller */
+@media (max-width: 991px) {
+  #main-sidebar {
+    display: none !important;
   }
-  .main {
+
+  #main-content {
     width: 100% !important;
     float: none !important;
   }
